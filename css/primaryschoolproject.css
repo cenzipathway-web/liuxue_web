@@ -1,0 +1,683 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.bg-light {
+    background-color: #f9f9f9;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #004a99; /* 新西兰蓝 */
+}
+
+/* 导航栏 */
+.navbar {
+    background: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004a99;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.btn-contact {
+    background: #e63946;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* 英雄海报 */
+/* 修改 style.css 中的 .hero 部分 */
+.hero {
+    height: 80vh;
+    /* 替换了新的图片链接，使用了更加阳光、有教育氛围的背景 */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #00bfa5;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* 栅格卡片 */
+.intro-grid, .school-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.intro-card, .school-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.intro-card:hover {
+    transform: translateY(-10px);
+}
+
+.school-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* 费用表格 */
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.fee-table th, .fee-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+.fee-table th {
+    background-color: #004a99;
+    color: white;
+}
+
+/* 页脚 */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* 费用备注样式 */
+.fee-note {
+    margin-top: 15px;      /* 与表格保持一定间距 */
+    font-size: 0.9rem;     /* 字体略小 */
+    color: #666;           /* 颜色调浅，突出备注感 */
+    line-height: 1.5;
+    text-align: left;      /* 与表格对齐方式一致 */
+    padding-left: 5px;     /* 微调左侧间距 */
+    border-left: 3px solid #e63946; /* 可选：左侧加一根细红条，起到提醒作用 */
+}
+
+
+/* 项目介绍模块升级样式 */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    color: #004a99;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: -35px;
+    letter-spacing: 1px;
+}
+
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.curr-card {
+    background: #ffffff;
+    padding: 45px 35px;
+    border-radius: 15px;
+    /* 顶部细条，给家长一种严谨感 */
+    border-top: 6px solid #00bfa5;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* 偶数卡片换个颜色，增加视觉节奏 */
+.curr-card:nth-child(even) {
+    border-top-color: #004a99;
+}
+
+.curr-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0,74,153,0.12);
+}
+
+.curr-icon {
+    font-size: 3.2rem;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.curr-card h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.curr-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+.curr-points {
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.curr-points li {
+    padding-left: 22px;
+    position: relative;
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* 使用翠绿色的小勾，代表新西兰的教育品质 */
+.curr-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #00bfa5;
+    font-weight: bold;
+}
+
+
+
+/* 给四个模块分配不同的主题色点缀 */
+.curr-card:nth-child(1) { border-top-color: #004a99; } /* 经典蓝：文学 */
+.curr-card:nth-child(2) { border-top-color: #00bfa5; } /* 科技绿：理科 */
+.curr-card:nth-child(3) { border-top-color: #e63946; } /* 活力红：体育 */
+.curr-card:nth-child(4) { border-top-color: #ffb703; } /* 创意黄：艺术 */
+
+/* 强调“互动”：鼠标滑过时背景微变色，图标抖动 */
+.curr-card:hover .curr-icon {
+    display: inline-block;
+    animation: wobble 0.5s ease-in-out;
+}
+
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.curr-points li {
+    background: rgba(240, 240, 240, 0.5);
+    margin-bottom: 5px;
+    padding: 8px 10px 8px 30px;
+    border-radius: 5px;
+}
+
+
+/* 宏观对比区域 */
+.vision-comparison {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+    padding: 40px;
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+    border-radius: 20px;
+}
+
+.vision-text {
+    flex: 1.2;
+}
+
+.vision-desc {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.vision-image {
+    flex: 0.8;
+}
+
+.vision-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+}
+
+/* 优势标签 */
+.benefit-tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.benefit-tag {
+    padding: 8px 18px;
+    background: #004a99;
+    color: white;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #ddd, transparent);
+    margin: 80px 0;
+}
+
+/* 保持之前的卡片样式并微调 */
+.curr-card {
+    border-top: none; /* 取消顶部线条，改为渐变背景 */
+    background: #fff;
+    border: 1px solid #eee;
+    transition: all 0.5s ease;
+}
+
+.curr-card:hover {
+    border-color: #004a99;
+    box-shadow: 0 30px 60px rgba(0,74,153,0.1);
+}
+
+.curr-card h3 {
+    border-left: 4px solid #004a99;
+    padding-left: 15px;
+}
+
+
+/* 项目详情行布局 */
+.project-feature-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.feature-content {
+    flex: 1.2;
+}
+
+.feature-content h3 {
+    font-size: 1.8rem;
+    color: #004a99;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.feature-list li {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.feature-list li::before {
+    content: "●";
+    color: #e63946;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+.feature-image {
+    flex: 0.8;
+}
+
+/* 服务格子 */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-box {
+    background: #fff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+}
+
+.s-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.service-box h4 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.service-box p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .project-feature-row {
+        flex-direction: column;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* 服务模块深度美化 */
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+    transition: all 0.4s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0,74,153,0.1);
+}
+
+.service-stage {
+    display: inline-block;
+    background: #00bfa5; /* 翠绿色 */
+    color: white;
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #004a99;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.s-list {
+    list-style: none;
+    padding: 0;
+}
+
+.s-list li {
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.9rem;
+    color: #444;
+    margin-bottom: 12px;
+}
+
+.s-list li::before {
+    content: "•";
+    color: #004a99;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.s-list strong {
+    color: #333;
+}
+
+/* 视觉增强：增加时间戳标签 */
+.vision-image {
+    position: relative;
+    flex: 0.8;
+}
+
+.time-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: #e63946; /* 活力红 */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    box-shadow: 0 10px 30px rgba(230, 57, 70, 0.3);
+    line-height: 1.4;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* 文字加粗强调色 */
+.vision-desc strong {
+    color: #004a99;
+    font-weight: 700;
+}
+
+.vision-desc {
+    margin-bottom: 25px; /* 增加段落间距，更易阅读 */
+}
+/* 悬浮客服容器 */
+.floating-contact {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+/* 悬浮小图标 */
+.contact-trigger {
+    background: #e63946;
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(230, 57, 70, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.contact-trigger:hover {
+    transform: scale(1.1);
+}
+
+.contact-trigger .icon { font-size: 24px; }
+.contact-trigger span { font-size: 10px; margin-top: 2px; }
+
+/* 详情卡片 */
+.contact-card {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 260px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.15);
+    display: none; /* 默认隐藏 */
+    overflow: hidden;
+    animation: fadeInUp 0.4s ease;
+}
+
+.card-header {
+    background: #004a99;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+.qr-code {
+    width: 150px;
+    margin: 15px 0;
+    border: 1px solid #eee;
+    padding: 5px;
+}
+
+.wechat-id {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copy-btn {
+    background: #00bfa5;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* 修改原有的 @keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateX(50px); /* 改为从右侧滑入 */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 确保卡片有动画执行 */
+.contact-card {
+    /* ...原有属性保持不变... */
+    animation: fadeInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+/* 红色消息气泡 */
+.contact-trigger::after {
+    content: "1";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ffcf00; /* 黄色气泡更醒目 */
+    color: #333;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    /* 气泡呼吸灯动画 */
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 207, 0, 0.7); }
+    70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(255, 207, 0, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 207, 0, 0); }
+}
