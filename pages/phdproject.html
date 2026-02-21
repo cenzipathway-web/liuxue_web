@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>博士申请专家 - 全球顶级名校 PhD 全奖直通车</title>
+    <link rel="stylesheet" href="../css/phdproject.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">PHD<span>EXPERT</span></div>
+            <ul class="nav-links">
+                <li><a href="#faculty">师资实力</a></li>
+                <li><a href="#workflow">全流程服务</a></li>
+                <li><a href="#cases">成功案例</a></li>
+                <li><a href="#diy">半DIY模式</a></li>
+                <li><button class="consult-btn" onclick="toggleContact()">获取RP评估</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-phd">
+        <div class="container">
+            <div class="hero-content">
+                <span class="badge-top">顶级学术背景导师团</span>
+                <h1>定义你的学术高度</h1>
+                <p>从选题、套磁到 RP 撰写，全奖博士申请专家团队陪跑，助力斩获全球名校录用通知。</p>
+                <div class="hero-actions">
+                    <button class="btn-primary" onclick="toggleContact()">预约学术顾问</button>
+                    <button class="btn-secondary" onclick="window.location.href='#cases'">查看录取榜单</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="faculty" class="section">
+        <div class="container">
+            <h2 class="section-title">核心师资：只用实力说话</h2>
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <div class="f-icon">🎓</div>
+                    <h4>G5/藤校导师团</h4>
+                    <p>核心导师均来自牛剑、哈耶普斯等顶尖名校，拥有丰富的博士科研与申博经验。</p>
+                </div>
+                <div class="faculty-card">
+                    <div class="f-icon">📝</div>
+                    <h4>专业对口匹配</h4>
+                    <p>覆盖理工、商科、人文社科全领域，匹配相同或相近研究方向的导师进行1V1辅导。</p>
+                </div>
+                <div class="faculty-card">
+                    <div class="f-icon">🌍</div>
+                    <h4>外籍专家库</h4>
+                    <p>资深外籍教授负责语言润色与模拟面试，确保学术表达地道、严谨。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="workflow" class="section">
+        <div class="container">
+            <h2 class="section-title">管家式全流程：八大核心环节</h2>
+
+            <div class="workflow-timeline">
+                <div class="work-step">
+                    <div class="step-num">01</div>
+                    <div class="step-text">
+                        <h4>择校择导</h4>
+                        <p>深挖各大高校课题组动态，精准匹配目标导师的研究兴趣（Research Interest）。</p>
+                    </div>
+                </div>
+                <div class="work-step">
+                    <div class="step-num">02</div>
+                    <div class="step-text">
+                        <h4>学术CV定制</h4>
+                        <p>重新梳理科研经历、发表论文及项目成果，打造符合博导审美的高质量简历。</p>
+                    </div>
+                </div>
+                <div class="work-step">
+                    <div class="step-num">03</div>
+                    <div class="step-text">
+                        <h4>一对一套磁</h4>
+                        <p>首封邮件定制、学术跟进回复，指导如何与导师建立深层次学术互动。</p>
+                    </div>
+                </div>
+                <div class="work-step">
+                    <div class="step-num">04</div>
+                    <div class="step-text">
+                        <h4>RP (研究计划) 辅导</h4>
+                        <p>从选题思路到文献综述、方法论设计，全方位打磨足以说服博导的学术亮点。</p>
+                    </div>
+                </div>
+                <div class="work-step">
+                    <div class="step-num">05</div>
+                    <div class="step-text">
+                        <h4>面试辅导</h4>
+                        <p>拆解学术面试套路，针对课题组具体项目进行深度问答预演。</p>
+                    </div>
+                </div>
+                <div class="work-step">
+                    <div class="step-num">06</div>
+                    <div class="step-text">
+                        <h4>外籍面试模拟</h4>
+                        <p>外籍导师全英文仿真面试，纠正发音、语速与学术交流逻辑。</p>
+                    </div>
+                </div>
+                <div class="work-step">
+                    <div class="step-num">07</div>
+                    <div class="step-text">
+                        <h4>奖学金申请</h4>
+                        <p>攻克 CSC、全额奖学金（Full Funding）及各类特定基金申请文案。</p>
+                    </div>
+                </div>
+                <div class="work-step">
+                    <div class="step-num">08</div>
+                    <div class="step-text">
+                        <h4>网申与跟进</h4>
+                        <p>全程代办繁琐系统操作，实时关注申请动态，直至成功录取。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="diy" class="section bg-light">
+        <div class="container">
+            <div class="diy-box">
+                <div class="diy-text">
+                    <h2>灵活半DIY模式</h2>
+                    <p>针对有一定科研基础的学生，我们提供模块化服务。你可以只选择 **“RP 深度辅导”** 或 **“外籍面试模拟”**。把钱花在刀刃上，在保留自主权的同时，补齐学术短板。</p>
+                    <button class="btn-outline" onclick="toggleContact()">获取半DIY报价单</button>
+                </div>
+                <div class="diy-img">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="学术研究">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cases" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">博士录取案例深度剖析</h2>
+            <p class="section-subtitle">看他们如何突破背景限制，斩获全球顶尖 Offer</p>
+
+            <div class="phd-case-grid">
+                <div class="phd-case-card">
+                    <div class="phd-badge">科研潜力逆袭</div>
+                    <div class="student-profile">
+                        <h4>S同学 | 国内双非本科</h4>
+                        <p>背景：生物科学  GPA：3.3/4.0</p>
+                        <p>亮点：一篇C刊，两段科研经历</p>
+                    </div>
+                    <div class="phd-offer-result">
+                        <h5>最终录取：</h5>
+                        <p class="phd-school">香港大学 (HKU) - 生物医学 PhD</p>
+                        <p class="phd-funding">全额奖学金 (Full Studentship)</p>
+                    </div>
+                </div>
+
+                <div class="phd-case-card">
+                    <div class="phd-badge">名校全奖直通</div>
+                    <div class="student-profile">
+                        <h4>Z同学 | 英国G5硕士</h4>
+                        <p>背景：计算机科学  GPA：Distinction</p>
+                        <p>亮点：项目经验丰富，无一作论文</p>
+                    </div>
+                    <div class="phd-offer-result">
+                        <h5>最终录取：</h5>
+                        <p class="phd-school">牛津大学 (Oxford) - 计算机科学 PhD</p>
+                        <p class="phd-funding">CSC 国家公派奖学金</p>
+                    </div>
+                </div>
+
+                <div class="phd-case-card">
+                    <div class="phd-badge">跨专业成功转型</div>
+                    <div class="student-profile">
+                        <h4>L同学 | 美国硕士</h4>
+                        <p>背景：土木工程  GPA：3.7/4.0</p>
+                        <p>亮点：RP指导转向环境科学</p>
+                    </div>
+                    <div class="phd-offer-result">
+                        <h5>最终录取：</h5>
+                        <p class="phd-school">加州大学伯克利分校 (UC Berkeley) - 环境工程 PhD</p>
+                        <p class="phd-funding">TA / RA 助教助研奖学金</p>
+                    </div>
+                </div>
+
+                <div class="phd-case-card">
+                    <div class="phd-badge">工科转商科博</div>
+                    <div class="student-profile">
+                        <h4>W同学 | 国内985硕士</h4>
+                        <p>背景：机械工程  GPA：87/100</p>
+                        <p>亮点：研究兴趣聚焦供应链管理</p>
+                    </div>
+                    <div class="phd-offer-result">
+                        <h5>最终录取：</h5>
+                        <p class="phd-school">伦敦商学院 (LBS) - 运营管理 PhD</p>
+                        <p class="phd-funding">大学全额奖学金</p>
+                    </div>
+                </div>
+            </div>
+            <div class="case-more">
+                <button class="more-btn" onclick="toggleContact()">获取更多背景匹配案例与分析</button>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">PHD<span>EXPERT</span></div>
+                    <p class="footer-about">
+                        专注于全球顶级博士项目申请与全额奖学金辅导。凭借资深的学术导师团队，我们已助力众多学子成功进入世界一流科研殿堂。
+                    </p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>热门国家/地区</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">英国博士申请</a></li>
+                        <li><a href="#">美国PhD项目</a></li>
+                        <li><a href="#">港新博士全奖</a></li>
+                        <li><a href="#">澳洲研究型学位</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>快捷通道</h4>
+                    <ul class="footer-links">
+                        <li><a href="#faculty">导师团队</a></li>
+                        <li><a href="#workflow">服务流程</a></li>
+                        <li><a href="#cases">成功案例</a></li>
+                        <li><a href="#">常见问题 (FAQ)</a></li>
+                        <li><a href="#">关于我们</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <div class="contact-info">
+                        <p>📍 地址：深圳市南山区高新园创新大厦 B座 1202</p>
+                        <p>📞 电话：400-666-8888</p>
+                        <p>📧 邮箱：phd@phdexpert.com</p>
+                        <p>🕒 周一至周五：09:00 - 18:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 PhD Expert Consulting. All Rights Reserved. </p>
+                <div class="legal-links">
+                    <a href="#">隐私政策</a> | <a href="#">服务条款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="floating-contact">
+        <div class="contact-card" id="contactCard">
+            <div class="card-header">
+                <h4>PhD 学术委员会在线</h4>
+                <span class="close-btn" onclick="toggleContact()">×</span>
+            </div>
+            <div class="card-body">
+                <p id="dynamicMsg">Hi! 正在准备 Research Proposal 吗？</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=PHD_EXPERT" alt="二维码" class="qr-code">
+                <div class="wechat-id">
+                    <span>PHD_Apply_Expert</span>
+                    <button onclick="copyWeChat()" class="copy-btn">复制</button>
+                </div>
+            </div>
+        </div>
+        <div class="contact-trigger" id="contactTrigger" onclick="toggleContact()">
+            <div class="icon">🎓</div>
+            <span>学术咨询</span>
+        </div>
+    </div>
+
+    <audio id="noticeSound" preload="auto">
+        <source src="https://assets.mixkit.co/active_storage/sfx/2861/2861-preview.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="../js/phdproject.js"></script>
+</body>
+</html>

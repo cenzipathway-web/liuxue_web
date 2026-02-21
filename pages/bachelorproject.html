@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>名校本科菁英计划 - 全球顶尖大学申请专家</title>
+    <link rel="stylesheet" href="../css/bachelor-style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="logo">ELITE<span>UNDERGRAD</span></div>
+            <ul class="nav-links">
+                <li><a href="#planning">规划体系</a></li>
+                <li><a href="#services">背景提升</a></li>
+                <li><a href="#results">录取榜单</a></li>
+                <li><button class="consult-btn" onclick="toggleContact()">获取规划方案</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero-ug">
+        <div class="container">
+            <div class="hero-content">
+                <span class="tagline">从现在开始，锁定全球 TOP30</span>
+                <h1>点亮你的常春藤之路</h1>
+                <p>不止是申请，更是全方位的成长规划。针对 9-12 年级学生，定制个性化背景提升与升学路径。</p>
+                <div class="cta-group">
+                    <button class="btn-main" onclick="toggleContact()">免费测评竞争力</button>
+                    <button class="btn-sub">了解夏校项目</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="planning" class="section">
+        <div class="container">
+            <h2 class="section-title">本科申请：规划胜于申请</h2>
+            <p class="section-subtitle">早规划，早准备，让名校 Offer 水到渠成</p>
+
+
+
+            <div class="timeline-grid">
+                <div class="time-card">
+                    <div class="year">G9-G10</div>
+                    <h4>探索与储备期</h4>
+                    <p>挖掘兴趣爱好，选定课程体系（IB/AP/A-Level），启动标准化考试预备。</p>
+                </div>
+                <div class="time-card">
+                    <div class="year">G11</div>
+                    <h4>背景黄金提升期</h4>
+                    <p>核心竞赛突破、学术科研参与、顶级夏校申请，锁定标化高分。</p>
+                </div>
+                <div class="time-card">
+                    <div class="year">G12 Early</div>
+                    <h4>早申决战期</h4>
+                    <p>文书主旨打磨、ED/EA 策略选定、面试模拟与递交。</p>
+                </div>
+                <div class="time-card">
+                    <div class="year">G12 Regular</div>
+                    <h4>常规申请与确认</h4>
+                    <p>多国联合申请补全，等待 Offer 轰炸，最终入读指导。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">全方位背景提升体系</h2>
+            <div class="service-flex">
+                <div class="service-item">
+                    <div class="icon-box">🏆</div>
+                    <h4>国际竞赛指导</h4>
+                    <p>涵盖 AMC, AMC, BBO 等各学科顶级竞赛，专业教练 1V1 辅导。</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon-box">🔬</div>
+                    <h4>学术科研项目</h4>
+                    <p>名校教授带队，产出高质量论文或推荐信，增加学术权重。</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon-box">🤝</div>
+                    <h4>公益活动策划</h4>
+                    <p>拒绝模板化，根据学生特质策划具有独特影响力的社会实践。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="floating-contact">
+        <div class="contact-card" id="contactCard">
+            <div class="card-header">
+                <h4>本科升学顾问在线</h4>
+                <span class="close-btn" onclick="toggleContact()">×</span>
+            </div>
+            <div class="card-body">
+                <p id="dynamicMsg">想要获取《全球本科择校指南》？</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=UG_Consult" class="qr-code">
+                <div class="wechat-id">
+                    <span>Elite_Undergrad_Apply</span>
+                    <button onclick="copyWeChat()" class="copy-btn">复制</button>
+                </div>
+            </div>
+        </div>
+        <div class="contact-trigger" id="contactTrigger" onclick="toggleContact()">
+            <div class="icon">✨</div>
+            <span>规划咨询</span>
+        </div>
+    </div>
+
+    <audio id="noticeSound" preload="auto">
+        <source src="https://assets.mixkit.co/active_storage/sfx/2861/2861-preview.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="../js/bachelor-script.js"></script>
+</body>
+</html>

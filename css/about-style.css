@@ -1,0 +1,276 @@
+:root {
+    --primary: #003366; /* 主品牌蓝 */
+    --secondary: #e63946; /* 强调红 */
+    --light-bg: #f8f9fa; /* 浅灰色背景 */
+    --text: #333; /* 主文本颜色 */
+    --dark-text: #1a1a1a; /* 深色文本 */
+}
+
+/* Base Styles */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; color: var(--text); line-height: 1.6; font-size: 16px; background-color: white; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section { padding: 80px 0; }
+.bg-light { background: var(--light-bg); }
+.section-title { text-align: center; font-size: 2.2rem; margin-bottom: 20px; color: var(--dark-text); font-weight: bold; }
+.section-subtitle { text-align: center; font-size: 1.1rem; color: #777; margin-bottom: 60px; line-height: 1.5; }
+.text-white { color: white !important; }
+
+/* Navigation (与主页保持一致) */
+.navbar { background: white; padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+.logo span { color: var(--secondary); }
+.nav-links { list-style: none; display: flex; align-items: center; gap: 30px; }
+.nav-links a { text-decoration: none; color: #555; font-weight: 500; transition: 0.3s; }
+.nav-links a:hover { color: var(--primary); }
+
+/* Hero Section - About Us Specific */
+.hero-about {
+    background: linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)), url('https://images.unsplash.com/photo-1543269874-a690e54ae83b?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+.hero-about h1 { font-size: 3.2rem; margin-bottom: 20px; }
+.hero-about p { font-size: 1.1rem; margin-bottom: 40px; opacity: 0.9; }
+.hero-stats { display: flex; justify-content: center; gap: 60px; }
+.stat-item b { font-size: 2.5rem; display: block; }
+.stat-item span { font-size: 0.9rem; opacity: 0.8; }
+
+/* Mission & Vision Section */
+.mission-vision .container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+.mission-vision .text-block { flex: 1; }
+.mission-vision .image-block { flex: 1; }
+.mission-vision .image-block img { max-width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+
+.mission-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+.m-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.m-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.m-icon { font-size: 2.5rem; color: var(--secondary); margin-bottom: 20px; }
+.m-card h3 { font-size: 1.25rem; color: var(--primary); margin-bottom: 15px; }
+.m-card p { font-size: 0.95rem; color: #666; line-height: 1.7; }
+
+/* Culture Section */
+.culture-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: center;
+}
+.culture-item {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.c-icon { font-size: 2.8rem; color: var(--primary); margin-bottom: 20px; }
+.culture-item h3 { font-size: 1.2rem; color: var(--dark-text); margin-bottom: 12px; }
+.culture-item p { font-size: 0.9rem; color: #666; }
+
+/* Team Section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+    text-align: center;
+}
+.team-member {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid var(--secondary);
+    transition: transform 0.3s ease;
+}
+.team-member img:hover { transform: scale(1.05); }
+.team-member h3 { font-size: 1.3rem; color: var(--dark-text); margin-bottom: 8px; }
+.team-member span { display: block; color: var(--primary); font-weight: bold; font-size: 0.9rem; margin-bottom: 15px; }
+.team-member p { font-size: 0.9rem; color: #666; line-height: 1.6; margin-bottom: 20px; }
+.social-links a {
+    color: #999;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+.social-links a:hover { color: var(--primary); }
+
+/* Call to Action Section */
+.call-to-action {
+    background: linear-gradient(rgba(0,51,102,0.9), rgba(0,51,102,0.9)), url('https://images.unsplash.com/photo-1550993074-b5a76793f7c3?auto=format&fit=crop&w=1500&q=80') center/cover no-repeat;
+    text-align: center;
+    color: white;
+}
+.call-to-action .section-title { color: white; margin-bottom: 15px; }
+.call-to-action .section-subtitle { color: rgba(255,255,255,0.9); margin-bottom: 50px; }
+.cta-buttons { display: flex; justify-content: center; gap: 30px; }
+.btn-cta {
+    display: inline-block;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.primary-cta { background: var(--secondary); color: white; border: 2px solid var(--secondary); }
+.primary-cta:hover { background: transparent; color: var(--secondary); }
+.secondary-cta { background: transparent; color: white; border: 2px solid white; }
+.secondary-cta:hover { background: white; color: var(--primary); }
+
+/* Footer (与主页保持一致) */
+.footer {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 80px 0 30px;
+    font-size: 0.9rem;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.footer-col h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.footer-col h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--secondary);
+}
+.footer-about {
+    line-height: 1.8;
+    color: #aaa;
+    margin-top: 20px;
+}
+.footer-links {
+    list-style: none;
+}
+.footer-links li {
+    margin-bottom: 12px;
+}
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.footer-links a:hover {
+    color: var(--secondary);
+    padding-left: 5px;
+}
+.contact-info p {
+    margin-bottom: 15px;
+    color: #aaa;
+}
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #666;
+    font-size: 0.8rem;
+}
+.legal-links a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.legal-links a:hover {
+    color: #aaa;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .mission-vision .container { flex-direction: column; text-align: center; }
+    .mission-vision .image-block { order: -1; margin-bottom: 40px; }
+    .cta-buttons { flex-direction: column; gap: 20px; }
+}
+
+@media (max-width: 768px) {
+    .navbar .nav-links { display: none; } /* Simplifies for mobile, consider a hamburger menu in real project */
+    .hero-about h1 { font-size: 2.5rem; }
+    .hero-about p { font-size: 1rem; }
+    .hero-stats { flex-direction: column; gap: 20px; }
+    .mission-cards, .culture-grid, .team-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
+}
+/* 团队分类标签 */
+.team-segment {
+    margin-bottom: 60px;
+    border-left: 4px solid var(--primary);
+    padding-left: 20px;
+}
+
+.segment-label {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 30px;
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 团队成员卡片微调 */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    border: 1px solid #f0f0f0;
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 2px solid var(--secondary);
+}
+
+.team-member h3 { font-size: 1.1rem; margin-bottom: 5px; }
+.team-member span { font-size: 0.85rem; color: var(--secondary); display: block; margin-bottom: 10px; }
+.team-member p { font-size: 0.85rem; color: #666; line-height: 1.5; }
